@@ -30,8 +30,6 @@ public class FileUploader {
 
         WebElement fileInputButton = driver.findElement(By.cssSelector("#file-upload"));
         fileInputButton.sendKeys(System.getProperty("user.dir") + "/src/test/java/Resources/Screenshot_6.png");
-        File file = new File("src/test/java/Resources/Screenshot_6.png");
-        fileInputButton.sendKeys(file.getAbsolutePath());
         WebElement uploadButton = driver.findElement(By.cssSelector("#file-submit"));
         uploadButton.click();
         WebElement fileUploadMessage = driver.findElement(By.cssSelector("#uploaded-files"));
